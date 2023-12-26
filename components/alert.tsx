@@ -28,15 +28,26 @@ const Alert = ({ preview }: Props) => {
               to exit preview mode.
             </>
           ) : (
+            // <>
+            //   The source code for this blog is{' '}
+            //   <a
+            //     href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
+            //     className="underline hover:text-blue-600 duration-200 transition-colors"
+            //   >
+            //     available on GitHub
+            //   </a>
+            //   .
+            // </>
             <>
-              The source code for this blog is{' '}
-              <a
-                href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-                className="underline hover:text-blue-600 duration-200 transition-colors"
-              >
-                available on GitHub
-              </a>
-              .
+            This blog was scaffolded with{' '}
+            <a
+            href='https://nextjs.org/'
+            className="underline hover:text-teal-300 duration-200 transition-colors"
+            >
+            Next.js
+            </a>
+            {' | '} 
+            Link and more info in the footer.
             </>
           )}
         </div>
