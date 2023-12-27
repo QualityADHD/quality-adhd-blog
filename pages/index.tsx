@@ -31,6 +31,7 @@ export default function Index({ allPosts }: Props) {
               author={heroPost.author}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
+              automationTarget={"hero-post"}
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
@@ -48,6 +49,7 @@ export const getStaticProps = async () => {
     'author',
     'coverImage',
     'excerpt',
+    'automationTarget'
   ])
 
   return {

@@ -6,9 +6,10 @@ type Props = {
   title: string
   src: string
   slug?: string
+  automationTarget: string
 }
 
-const CoverImage = ({ title, src, slug }: Props) => {
+const CoverImage = ({ title, src, slug, automationTarget }: Props) => {
   const image = (
     <Image
       src={src}
@@ -18,12 +19,13 @@ const CoverImage = ({ title, src, slug }: Props) => {
       })}
       width={1300}
       height={630}
+      data-a-target={automationTarget + '-image'}
     />
   )
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
+        <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title} data-a-target={automationTarget + '-link'}>
           {image}
         </Link>
       ) : (
