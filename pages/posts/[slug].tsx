@@ -16,9 +16,10 @@ type Props = {
   post: PostType
   morePosts: PostType[]
   preview?: boolean
+  automationTarget: string
 }
 
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({ post, morePosts, preview, automationTarget }: Props) {
   const router = useRouter()
   const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`
   if (!router.isFallback && !post?.slug) {
@@ -42,6 +43,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
+                automationTarget={automationTarget}
               />
               <PostBody content={post.content} />
             </article>

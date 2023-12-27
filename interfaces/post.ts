@@ -11,6 +11,8 @@ type PostType = {
     url: string
   }
   content: string
+  automationTarget: string
+  index: number
 }
 
 export default PostType
